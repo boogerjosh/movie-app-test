@@ -4,4 +4,4 @@ import { ReadonlyRequestCookies } from "next/dist/server/web/spec-extension/adap
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
-  }
+}
