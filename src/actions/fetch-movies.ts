@@ -36,3 +36,15 @@ export async function fetchMoviesByyear(year: string, page: number) {
   }
 }
 
+export async function fetchMoviesById(id: string) {
+  const apiUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=d212dc1bfc2d8009f736f68f2e71938f`;
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
+}
+

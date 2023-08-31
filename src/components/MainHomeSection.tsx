@@ -42,7 +42,6 @@ const MainHomeSection = ({ movies }: MainHomeProps) => {
       // Fetch search results using the query
       setSelectedYear("");
       const movies = await fetchMoviesSearch(query, 1);
-      console.log(movies);
       setSearchResults(movies);
       setSearchPerformed(true);
     }
