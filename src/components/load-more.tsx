@@ -20,7 +20,6 @@ export function LoadMore() {
     // Once the page 8 is reached repeat the process all over again.
     await delay(2000);
     const nextPage = (page % 7) + 1;
-    console.log(nextPage);
     const newProducts = (await fetchMovies(nextPage)) ?? [];
     setMovies((prevProducts: Movie[]) => [...prevProducts, ...newProducts]);
     setPage(nextPage);
