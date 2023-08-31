@@ -4,7 +4,7 @@ import { fetchMovies, fetchMoviesSearch } from "@/actions/fetch-movies";
 import { LoadMore } from "@/components/load-more";
 import { Movies } from "@/components/movies";
 import { useEffect, useState } from "react";
-import { Autocomplete, Stack, TextField } from "@mui/material";
+import { Autocomplete, TextField } from "@mui/material";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -62,6 +62,17 @@ export default function Home() {
                   className: "text-white color", // Apply white color to the input label
                 }}
                 variant="outlined"
+                sx={{
+                  color: "white",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "white",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "white",
+                    },
+                  },
+                }}
               />
             )}
           />
